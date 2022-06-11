@@ -8,6 +8,8 @@ public class Foo
 
     private int age = 20; // Noncompliant
     private bool status = true;// Noncompliant
+
+    private long state = 15L;// Noncompliant
     public string DefaultName { get; } = "foobar"; // Noncompliant
 
 
