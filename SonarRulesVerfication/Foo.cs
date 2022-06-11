@@ -4,14 +4,12 @@ namespace SonarRulesVerfication;
 
 public class Foo
 {
-    private const string Hello = "Hello word constant";
+    private string name = "foobar"; // Noncompliant
 
-    public string DefaultName { get; } = "Hello word constant";
+    public string DefaultName { get; } = "foobar"; // Noncompliant
 
-
-    public Foo(string value = "Hello word constant") 
+    public Foo(string value = "foobar") // Noncompliant
     {
-        var something = value ?? Hello;
-        Console.WriteLine(something);
+        var something = value ?? "foobar"; // Noncompliant
     }
 }
