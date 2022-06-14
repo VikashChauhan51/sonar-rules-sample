@@ -1,6 +1,4 @@
-﻿
-
-namespace SonarRulesVerfication;
+﻿namespace SonarRulesVerfication;
 
 public class Foo
 {
@@ -9,8 +7,8 @@ public class Foo
     {
 
 
-        if (BooleanMethod() == true) { Console.WriteLine("Hello!"); } // Noncompliant
-        if (BooleanMethod() == false) { /* ... */ } // Noncompliant
+        if (BooleanMethod()) { Console.WriteLine("Hello!"); } 
+        if (BooleanMethod()){ /* ... */ } 
 
     }
 
