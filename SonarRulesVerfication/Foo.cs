@@ -1,19 +1,27 @@
 ﻿namespace SonarRulesVerfication;
 
-public class Foo
+public abstract class Animal //Noncompliant; should be an interface
 {
+    public abstract void Move();
+    public abstract void Feed();
+}
 
-    public Foo()
+public abstract class Color //Noncompliant; should be concrete with a private constructor
+{
+    private int red = 0;
+    private int green = 0;
+    private int blue = 0;
+
+    public int GetRed()
     {
-
-
-        if (BooleanMethod()) { Console.WriteLine("Hello!"); } 
-        if (BooleanMethod()){ /* ... */ } 
-
+        return red;
     }
-
-    static bool BooleanMethod()
+    public int GetGreen()
     {
-        return false;
+        return green;
+    }
+    public int GetBlue()
+    {
+        return blue;
     }
 }
